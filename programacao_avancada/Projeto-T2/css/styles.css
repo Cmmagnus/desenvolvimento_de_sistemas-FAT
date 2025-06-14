@@ -1,0 +1,321 @@
+/* ====================================================== */
+/* 1. Reset e estilos base                                */
+/* ====================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* ====================================================== */
+/* 2. Tipografia                                           */
+/* ====================================================== */
+h1, h2, h3 {
+  font-weight: 700;
+  color: #f1f1f1;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* ====================================================== */
+/* 3. Navbar                                               */
+/* ====================================================== */
+#main-navbar {
+  background-color: #1f1f1f;
+  padding: 10px 20px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#logo {
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#filmes-title {
+  color: #ffffff;
+  position: absolute;
+  bottom: -2px;
+  left: 55px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* ====================================================== */
+/* 4. Formulário de busca                                  */
+/* ====================================================== */
+#search-form {
+  margin-left: 180px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+#search {
+  border: none;
+  width: 90%;
+  outline: none;
+}
+
+#search-form button {
+  background: none;
+  border: none;
+  color: #333;
+}
+
+#search-form button:hover {
+  color: #000;
+}
+
+/* Ícone da lupa no botão de busca */
+#search-form button i {
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+#search-form button:hover i {
+  color: #007bff;
+}
+
+/* ====================================================== */
+/* 5. Navegação - links                                    */
+/* ====================================================== */
+.navbar-nav {
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #ffffff;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #999;
+}
+
+/* ====================================================== */
+/* 6. Conteúdo principal                                   */
+/* ====================================================== */
+.main-container {
+  padding: 40px;
+  min-height: 65vh;
+}
+
+/* ====================================================== */
+/* 7. Rodapé                                               */
+/* ====================================================== */
+#footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+#social-container ul,
+#footer-links-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#social-container li,
+#footer-links-container li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+#social-container li {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transition: 0.3s;
+  line-height: 40px;
+}
+
+#social-container li:hover {
+  background-color: #333;
+}
+
+#social-container a,
+#footer-links-container a {
+  color: #FFF;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+#social-container i {
+  font-size: 22px;
+}
+
+#footer-links-container {
+  margin: 20px 0;
+}
+
+/* ====================================================== */
+/* 8. Banner da home com sobreposição de texto */
+/* ====================================================== */
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.banner-img {
+  width: 100%;
+  max-height: none;
+  height: auto;
+  display: block;
+}
+
+.banner-text {
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 40px 60px;
+  border-radius: 12px;
+  max-width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  margin: 20px auto;
+}
+
+.banner-text h1 {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner-text p {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/* ====================================================== */
+/* 9. Responsividade com outras medias */
+/* ====================================================== */
+@media (max-width: 768px) {
+  .banner-text {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .banner-text h1 {
+    font-size: 28px;
+  }
+
+  .banner-text p {
+    font-size: 16px;
+  }
+}
+
+/* ====================================================== */
+/* 10. Botão do banner */
+/* ====================================================== */
+.btn-banner {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-banner:hover {
+  background-color: #0056b3;
+}
+
+/* ====================================================== */
+/* 11. Cards dos filmes */
+/* ====================================================== */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.card-container .movie-card {
+  width: 200px;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+.card-container .movie-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card-container .movie-card h3 {
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.card-container .movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.card-container .movie-card:nth-child(1) { animation-delay: 0.2s; }
+.card-container .movie-card:nth-child(2) { animation-delay: 0.4s; }
+.card-container .movie-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* ====================================================== */
+/* 12. Efeito Fade-in (animação) */
+/* ====================================================== */
+.custom-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
