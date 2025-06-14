@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplo com Formulários</title>
+</head>
+<body>
+	<form action="cadastro.php" method="post">
+		<fieldset>
+			<h1 align="center">Cadastro de Clientes</h1>
+			<p>
+				<label form="nome">Nome: </label>
+				<input type="text" id="nome" name="nome" required>
+			</p>
+			<p>
+				<label form="senha">Senha: </label>
+				<input type="password" id="senha" name="senha" required>
+			</p>
+			<p>
+				<label form="idade">Idade: </label>
+				<input type="number" id="idade" name="idade" required>
+			</p>
+			<p>
+				<label form="email">E-mail: </label>
+				<input type="email" id="email" name="email" required>
+			</p>
+			<p>
+				<label form="data">Data de nascimento: </label>
+				<input type="date" id="data" name="data">
+			</p>
+			<p>
+				<label form="cor">Cor favorita: </label>
+				<input type="color" id="cor" name="cor">
+			</p>
+		</fieldset>
+		<fieldset>
+			<p>Observações:</p>
+			<textarea name="mensagem" id="mensagem" cols="30" 
+			rows="10">				
+			</textarea>
+			<p><select name="motivo" id="motivo">
+				<option value="sem_motivo">Não selecionado</option>
+				<option value="razoavel">Aula reazoável</option>
+				<option value="elogio">Aula legal</option>
+				<option value="reclamacao">Aula péssima</option>
+			</select></p>
+		</fieldset>
+		<p><button type="submit">Enviar</button></p>
+		<button type="reset">Limpar</button>
+	</form>
+</body>
+</html>
